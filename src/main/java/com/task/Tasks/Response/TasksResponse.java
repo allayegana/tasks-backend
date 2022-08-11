@@ -13,13 +13,15 @@ import java.time.LocalDateTime;
 @Data
 public class TasksResponse {
 
+    private Long id;
     private String descricao;
-    private LocalDateTime estimateAt;
+    private LocalDateTime estimateAt = LocalDateTime.now();
     private LocalDateTime doneAt;
 
     public TasksResponse(Tasks tasks) {
-      this.descricao = tasks.getDescricao();
-      this.estimateAt = tasks.getEstimateAt();
-      this.doneAt = tasks.getDoneAt();
+        this.id = tasks.getId();
+        this.descricao = tasks.getDescricao();
+        this.estimateAt = tasks.getEstimateAt();
+        this.doneAt = tasks.getDoneAt();
     }
 }

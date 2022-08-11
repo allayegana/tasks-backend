@@ -26,7 +26,7 @@ public class TasksControllers {
 
     @GetMapping(path = "get-all", produces = APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
-    public List<TasksResponse> getTasksList() {
+    public List<TasksResponse> getTasksList(){
         return tasksUseCase.getTasksList();
     }
 

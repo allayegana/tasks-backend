@@ -21,7 +21,7 @@ public class TasksBuilder {
         return Tasks
                 .builder()
                 .descricao(tasksRequest.getDescricao())
-                .estimateAt(LocalDateTime.parse(tasksRequest.getEstimateAt().toString()))
+                .estimateAt(tasksRequest.getEstimateAt())
                 .build();
     }
 
@@ -30,7 +30,6 @@ public class TasksBuilder {
         if (tasks == null){
             return new ArrayList<>();
         }
-
         return tasks.stream().map(TasksResponse::new).collect(Collectors.toList());
     }
 }
