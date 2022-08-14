@@ -23,7 +23,6 @@ public class TasksUseCase {
 
 
     public void saveTasks(TasksRequest tasksRequest) {
-
         tasksRepositoryFacade.salvar(tasksRequest);
     }
 
